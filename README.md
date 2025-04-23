@@ -110,7 +110,7 @@ This repository contains the frontend codebase for a modern, scalable perfume e-
 
 ## 🔌 `services/` Folder – API Handlers
 
-### `api.js`
+### `axios.js`
 - Axios instance setup.
 - Interceptors for auth token injection and error handling.
 
