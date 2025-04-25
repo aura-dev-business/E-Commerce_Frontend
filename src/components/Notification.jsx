@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
+import toast, { Toaster } from "react-hot-toast";
 
-const Notification = () => {
-  return (
-    <div>
-      Notification
-    </div>
-  )
-}
+const Notification = () => <Toaster position="top-right" reverseOrder={false} />;
 
-export default Notification
+export { toast };
+export default Notification;
