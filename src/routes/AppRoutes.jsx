@@ -35,16 +35,18 @@ const AppRoutes = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/admin" element={authUser ? <AdminDashboard /> : <Navigate to="/login" />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/checkout" element={authUser ? <Checkout /> : <Navigate to="/login" />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/orders" element={authUser ? <Orders /> : <Navigate to="/login" />} />
-      <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/profile" element={authUser ? <Profile /> : <Navigate to="/login" />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/" element={ <Home /> } />
+        <Route path="/admin" element={ authUser ? <AdminDashboard />  : <Navigate to="/login" />} />
+        <Route path="/cart" element={ <Cart /> } />
+        <Route path="/checkout" element={authUser ? <Checkout /> : <Navigate to="/login" />} />
+        <Route path="/login" element={ <Login /> } />
+        <Route path="/orders" element={authUser ? <Orders /> : <Navigate to="/login" />} />
+        <Route path="/product/:id" element={ <ProductDetail /> } />
+        <Route path="/profile" element={authUser ? <Profile /> : <Navigate to="/login" />} />
+        <Route path="/register" element={ <Register /> } />
+
+        {/* Redirect all other paths to home */}
+        <Route path="*" element={ <Navigate to="/" /> } />
     </Routes>
   );
 };
